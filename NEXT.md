@@ -31,7 +31,7 @@ El repo está público y pasa su propio protocolo de juez desde un clon limpio. 
 
 ## Lo que NO hay que volver a hacer
 
-- **No releer las 112 letters.** Están destiladas en `ALARIFE/_config/fundamentos-comps-clief-notes.md`, con citas textuales. Las fuentes crudas están en `ALARIFE/_references/skool-comp{8,9,10,11}*`, commiteadas.
+- **No releer las 112 letters.** Están destiladas en `_config/fundamentos-comps-clief-notes.md` del workspace ALARIFE (local, fuera de este repo), con citas textuales. Las fuentes crudas están en `ALARIFE/_references/skool-comp{8,9,10,11}*`, commiteadas.
 - **No re-correr los cold-walks.** Los dos mapas de `proof/` son la evidencia y no caducan; los repos que mapean están pineados en su historia (`fluffyhowl/temp-mail`, `YuriCrystal/relay`).
 - **No inventar más territorios.** Dos Workers públicos alcanzan; el tercero no agrega evidencia, agrega superficie.
 
