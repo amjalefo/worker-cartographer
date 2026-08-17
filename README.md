@@ -6,9 +6,11 @@ Drop this folder into a Claude project, point it at a Cloudflare Worker, and it 
 
 ## Judge protocol — six minutes, no API key
 
-1. `node verify.mjs --selftest` — six deliberately broken maps, each must fail on its own named check. Nothing passes silently.
-2. `node verify.mjs proof/relay/` and `node verify.mjs proof/temp-mail/` — the two maps in `proof/` were produced by cold agents against public repos they had never seen. Every `path:line` in them is re-read from the actual file.
-3. `proof/*/friction.md` — what each agent said this instrument got **wrong**. Read those before believing anything above.
+1. `node verify.mjs --selftest` — ten deliberately broken maps, each must fail on its **own** named check; failing on the wrong one counts as a miss. It also prints coverage: every check that can fail a real map has a fixture proving it still fires, or is listed with the reason it does not.
+2. `node verify.mjs proof/relay --subject <a clone of YuriCrystal/relay>` — the two maps in `proof/` were produced by cold agents against public repos they had never seen. With `--subject`, every `path:line` is re-read from the actual file. Without it, citations report as unverifiable rather than passing.
+3. `proof/relay/07-friction.md` and `proof/temp-mail/07-friction.md` — what each agent said this instrument got **wrong**. Read those before believing anything above.
+
+Expect failures in step 2, and they are the point: both maps still carry `verified <date>` without a commit, because the rule requiring a commit came *from* these friction reports and postdates the walks. `KNOWN-ISSUES.md` has the chain.
 
 The checker refuses to flag what it cannot quote. If a claim cannot be pinned to a line, it reports the gap rather than a verdict.
 
