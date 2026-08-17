@@ -1,5 +1,7 @@
 # worker-cartographer
 
+> ⏸ **Parked until Thu 20 / Fri 21 Aug 2026** — see [NEXT.md](NEXT.md) for where to resume and what is still open.
+
 Drop this folder into a Claude project, point it at a Cloudflare Worker, and it maps it. What it leaves behind — a catalog plus cards — is the product. This folder is the instrument.
 
 ## Judge protocol — six minutes, no API key
